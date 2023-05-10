@@ -11,6 +11,7 @@ repositories {
 
 ext {
     keycloakVersion = '21.1.1'
+    oJdbcVersion = '21.9.0.0'
 }
 
 dependencies {
@@ -19,6 +20,7 @@ dependencies {
     compileOnly "org.keycloak:keycloak-server-spi-private:${keycloakVersion}"
     compileOnly "org.keycloak:keycloak-services:${keycloakVersion}"
     compileOnly "org.keycloak:keycloak-model-legacy:${keycloakVersion}"
+    compileOnly "com.oracle.database.jdbc:ojdbc11:${oJdbcVersion}"
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
